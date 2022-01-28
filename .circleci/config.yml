@@ -45,8 +45,7 @@ jobs:
 workflows:
   sample-workflow:
     jobs:
-      - aws-cli:
-          context: aws
+      - aws-cli
       - ansible-playbook:
           requires:
             - "aws-cli"
